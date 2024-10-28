@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .user, .pass {
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+        }
+        #loginBtn {
+            padding: 10px 20px;
+        }
+        #userInfo {
+            margin-top: 20px;
+            display: none; /* Ẩn phần này ban đầu */
+        }
+        .hidden {
+            display: none; /* Ẩn phần tử */
+        }
+    </style>
+</head>
+<body>
+    <div id="loginForm">
+        <input class="user" type="text" id="msvInput" placeholder="Nhập mã sinh viên">
+        <input class="pass" type="password" id="passwordInput" placeholder="Nhập mật khẩu">
+        <button id="loginBtn">Đăng nhập</button>
+    </div>
+    
+    <div id="userInfo">
+        <h3>Thông tin người dùng:</h3>
+        <p id="userMsv"></p>
+        <p id="userEmail"></p>
+        <p id="userRole"></p>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js"></script>
+    <script type="module" src="login.js"></script>
+</body>
+</html>
